@@ -1346,93 +1346,91 @@
 
 <section id="contact" class="contact-section">
 
+    <div class="container">
 
-<div class="container">
+        <div class="text-center mb-5">
 
-    <div class="text-center mb-5">
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
+            <p class="text-secondary">
+                Have an opportunity or project?
+                Feel free to contact me.
+            </p>
 
-        <p class="text-secondary">
-            Have an opportunity or project?
-            Feel free to contact me.
-        </p>
+        </div>
 
-    </div>
+        <div class="row justify-content-center">
 
+            <div class="col-lg-8">
 
-    <div class="row justify-content-center">
+                <div class="contact-card">
 
-        <div class="col-lg-8">
+                    <!-- Contact Form -->
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-            <div class="contact-card">
+                        <div class="row">
 
-                <form id="contactForm">
+                            <div class="col-md-6 mb-3">
 
-                    <div class="row">
+                                <label class="form-label">
+                                    Your Name
+                                </label>
 
-                        <div class="col-md-6 mb-3">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form-control"
+                                    placeholder="Enter your name"
+                                    required>
 
-                            <label class="form-label">
-                                Your Name
-                            </label>
+                            </div>
 
-                            <input
-                                type="text"
-                                id="name"
-                                class="form-control"
-                                placeholder="Enter your name"
-                                required>
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
 
                         </div>
 
-
-                        <div class="col-md-6 mb-3">
+                        <div class="mb-3">
 
                             <label class="form-label">
-                                Email Address
+                                Message
                             </label>
 
-                            <input
-                                type="email"
-                                id="email"
+                            <textarea
+                                name="message"
                                 class="form-control"
-                                placeholder="Enter your email"
-                                required>
+                                rows="5"
+                                placeholder="Write your message..."
+                                required></textarea>
 
                         </div>
 
-                    </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary px-5">
 
+                            <i class="bi bi-send"></i>
+                            Send Message
 
-                    <div class="mb-3">
+                        </button>
 
-                        <label class="form-label">
-                            Message
-                        </label>
+                    </form>
 
-                        <textarea
-                            id="message"
-                            class="form-control"
-                            rows="5"
-                            placeholder="Write your message..."
-                            required></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary px-5">
-
-                        <i class="bi bi-send"></i>
-                        Send Message
-
-                    </button>
-
-                </form>
+                </div>
 
             </div>
 
@@ -1440,11 +1438,7 @@
 
     </div>
 
-</div>
-
-
 </section>
-
 <!-- ================= FOOTER ================= -->
 
 <footer class="text-center">
