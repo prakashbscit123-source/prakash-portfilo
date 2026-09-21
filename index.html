@@ -1344,6 +1344,8 @@
 
 <!-- ================= CONTACT ================= -->
 
+<!-- ================= CONTACT ================= -->
+
 <section id="contact" class="contact-section">
 
     <div class="container">
@@ -1361,6 +1363,7 @@
 
         </div>
 
+
         <div class="row justify-content-center">
 
             <div class="col-lg-8">
@@ -1368,10 +1371,13 @@
                 <div class="contact-card">
 
                     <!-- Contact Form -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form
+                        action="https://formspree.io/f/xkjgjzwr"
+                        method="POST">
 
                         <div class="row">
 
+                            <!-- Name -->
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
@@ -1387,6 +1393,8 @@
 
                             </div>
 
+
+                            <!-- Email -->
                             <div class="col-md-6 mb-3">
 
                                 <label class="form-label">
@@ -1404,6 +1412,8 @@
 
                         </div>
 
+
+                        <!-- Message -->
                         <div class="mb-3">
 
                             <label class="form-label">
@@ -1419,6 +1429,8 @@
 
                         </div>
 
+
+                        <!-- Send Button -->
                         <button
                             type="submit"
                             class="btn btn-primary px-5">
@@ -1474,28 +1486,6 @@
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
-
-    /* Contact Form */
-
-    document
-        .getElementById("contactForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const name =
-                document.getElementById("name").value;
-
-            alert(
-                "Thank you " +
-                name +
-                "! Your message has been submitted."
-            );
-
-            this.reset();
-
-        });
-
 
     /* Back To Top */
 
