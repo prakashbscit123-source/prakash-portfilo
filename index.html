@@ -24,6 +24,10 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 
 <style>
 
@@ -400,36 +404,179 @@
 
     /* ================= TIMELINE ================= */
 
-    .timeline {
-        border-left: 3px solid #0d6efd;
-        padding-left: 30px;
+    /* ================================
+   Learning Journey Timeline
+================================ */
+
+.learning-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #212529;
+}
+
+.section-subtitle {
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 45px;
+}
+
+/* Vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        #0d6efd,
+        #6f42c1
+    );
+    border-radius: 10px;
+}
+
+/* Timeline item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* Circle */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+
+    left: -39px;
+    top: 25px;
+
+    width: 20px;
+    height: 20px;
+
+    background: #ffffff;
+
+    border: 5px solid #0d6efd;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+
+    z-index: 2;
+}
+
+/* Card */
+.timeline-card {
+    background: #ffffff;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e9ecef;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.timeline-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    border-color: #0d6efd;
+}
+
+/* Icon */
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(13, 110, 253, 0.1);
+
+    color: #0d6efd;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+/* Title */
+.timeline-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: #212529;
+
+    margin-bottom: 10px;
+}
+
+/* Description */
+.timeline-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Badge */
+.learning-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    background: #e7f1ff;
+
+    color: #0d6efd;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .learning-section {
+        padding: 60px 15px;
     }
 
-    .timeline-item {
-        position: relative;
-        margin-bottom: 40px;
+    .timeline {
+        padding-left: 35px;
+    }
+
+    .timeline::before {
+        left: 8px;
     }
 
     .timeline-item::before {
-        content: "";
-
-        position: absolute;
-
-        left: -41px;
-        top: 5px;
-
-        width: 18px;
-        height: 18px;
-
-        background: #0d6efd;
-
-        border-radius: 50%;
-
-        border: 4px solid white;
-
-        box-shadow: 0 0 0 3px #0d6efd;
+        left: -35px;
     }
 
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
 
     /* ================= CONTACT ================= */
 
@@ -1339,82 +1486,209 @@
 </section>
 <!-- ================= EXPERIENCE / LEARNING ================= -->
 
-<section>
+<section class="learning-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                My Learning Journey
+            </h2>
+
+            <p class="section-subtitle">
+                My journey of learning and developing technical skills
+            </p>
+
+        </div>
 
 
-<div class="container">
+        <div class="row justify-content-center">
 
-    <div class="text-center mb-5">
+            <div class="col-lg-8">
 
-        <h2 class="section-title">
-            My Learning Journey
-        </h2>
-
-    </div>
+                <div class="timeline">
 
 
-    <div class="row justify-content-center">
+                    <!-- Python -->
+                    <div class="timeline-item">
 
-        <div class="col-lg-8">
+                        <div class="timeline-card">
 
-            <div class="timeline">
+                            <div class="timeline-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
 
+                            <h4>
+                                Python Development
+                            </h4>
 
-                <div class="timeline-item">
+                            <p class="text-muted">
 
-                    <h4>
-                        Python Development
-                    </h4>
+                                Learned Python programming,
+                                OOP, functions, exception handling
+                                and Python libraries.
 
-                    <p class="text-muted">
-                        Learned Python programming,
-                        OOP, functions, exception handling
-                        and libraries.
-                    </p>
+                            </p>
 
-                </div>
+                            <span class="learning-badge">
+                                Python
+                            </span>
 
+                        </div>
 
-                <div class="timeline-item">
-
-                    <h4>
-                        Web Development
-                    </h4>
-
-                    <p class="text-muted">
-                        Learned HTML, CSS, JavaScript,
-                        Bootstrap and responsive design.
-                    </p>
-
-                </div>
+                    </div>
 
 
-                <div class="timeline-item">
+                    <!-- Web Development -->
+                    <div class="timeline-item">
 
-                    <h4>
-                        Django Development
-                    </h4>
+                        <div class="timeline-card">
 
-                    <p class="text-muted">
-                        Learned Django architecture,
-                        models, views, templates,
-                        forms and REST APIs.
-                    </p>
+                            <div class="timeline-icon">
+                                <i class="bi bi-globe"></i>
+                            </div>
 
-                </div>
+                            <h4>
+                                Web Development
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Learned HTML, CSS, JavaScript,
+                                Bootstrap and responsive web design.
+
+                            </p>
+
+                            <span class="learning-badge">
+                                HTML • CSS • JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
 
 
-                <div class="timeline-item">
+                    <!-- Django -->
+                    <div class="timeline-item">
 
-                    <h4>
-                        AI & Machine Learning
-                    </h4>
+                        <div class="timeline-card">
 
-                    <p class="text-muted">
-                        Completed courses related to
-                        Artificial Intelligence and
-                        Machine Learning.
-                    </p>
+                            <div class="timeline-icon">
+                                <i class="bi bi-server"></i>
+                            </div>
+
+                            <h4>
+                                Django Development
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Learned Django architecture,
+                                models, views, templates,
+                                forms and REST APIs.
+
+                            </p>
+
+                            <span class="learning-badge">
+                                Django • REST API
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AI ML -->
+                    <div class="timeline-item">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+
+                            <h4>
+                                AI & Machine Learning
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Completed courses related to
+                                Artificial Intelligence and
+                                Machine Learning.
+
+                            </p>
+
+                            <span class="learning-badge">
+                                AI • ML
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- React -->
+                    <div class="timeline-item">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-icon">
+                                <i class="bi bi-layers"></i>
+                            </div>
+
+                            <h4>
+                                React Development
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Learned React components,
+                                props, state, hooks and
+                                frontend application development.
+
+                            </p>
+
+                            <span class="learning-badge">
+                                React
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FastAPI -->
+                    <div class="timeline-item">
+
+                        <div class="timeline-card">
+
+                            <div class="timeline-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+
+                            <h4>
+                                FastAPI Development
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Learned FastAPI for building
+                                modern, fast and scalable
+                                REST APIs using Python.
+
+                            </p>
+
+                            <span class="learning-badge">
+                                FastAPI
+                            </span>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -1423,9 +1697,6 @@
         </div>
 
     </div>
-
-</div>
-
 
 </section>
 
